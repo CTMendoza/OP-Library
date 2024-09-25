@@ -1,0 +1,57 @@
+/* color palette 
+persian indigo #27187E (use for side bar background)
+cornflower blue #758BFD
+periwinkle #AEB8FE
+anti-flash white #F1F2F6 (general font color)
+UT Orange #FF8600 (nav bar background color)
+*/
+
+* {
+    color: #F1F2F6;
+}
+
+body  {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radio-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.reg-input {
+    width: 90%;
+    height: 35px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 4px 3px 1px #0B3948;
+}
+
+#submit-button {
+    color: #AEB8FE;
+}
+
+.sidebar {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-color: #ACB0BD;;
+}
+
+.nav {
+    grid-column: 2/3 ;
+    grid-row: 1/2;
+    background-color: #F9DB6D;
+}
