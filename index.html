@@ -9,21 +9,25 @@
 </head>
 <body>
     <div class="sidebar">
-        <form action="#" method="post" >
+        <form action="#" method="post" id="book-form" >
             <h1>New Book</h1>
             <input class="reg-input" type="text" placeholder="Title" name="title">
             <input class="reg-input" type="text" placeholder="Author" name="author">
             <input class="reg-input" type="number" placeholder="How many pages?" name="page_total">
             <div class="radio-container">
-                <input id="read" type="radio">
-                <label for="read">Read</label>
-                <input id="not_read" type="radio">
-                <label for="not_read">Not Read</label>
+                <div>
+                    <input id="read" type="radio" name="readOrNot">
+                    <label for="read">Read</label>
+                </div>
+                <div>
+                    <input id="not-read" type="radio" name="readOrNot">
+                    <label for="not-read">Not Read</label> 
+                </div>
             </div>
             <button id="submit-button" type="submit">Add Book</button>
         </form>
     </div>
     <div class="nav"></div>
-    <div></div>
+    <div class="content"></div>
 </body>
 </html>

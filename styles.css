@@ -20,30 +20,56 @@ body  {
     grid-template-rows: 1fr 4fr;
 }
 
-form {
+#book-form, .radio-container, .radio-container > div {
     display: flex;
-    flex-direction: column;
+}
+
+.radio-container label {
+    font-size: 20px;
+}
+
+.radio-container > div {
     align-items: center;
 }
 
-.radio-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 15px;
+#book-form {
+    flex-direction: column;
+    align-items: center;
+    height: 75%;
+    justify-content: space-evenly;
 }
+
+#read, #not-read {
+    width: 20px;
+    height: 20px;
+}
+
+
+.radio-container {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+
 
 .reg-input {
     width: 90%;
     height: 35px;
     margin-bottom: 15px;
     border-radius: 10px;
+    font-size: 20px;
+    color: #AEB8FE;
     border: none;
     box-shadow: 1px 4px 3px 1px #0B3948;
 }
 
 #submit-button {
     color: #AEB8FE;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 4px 3px 1px #0B3948;
 }
 
 .sidebar {
@@ -56,4 +82,11 @@ form {
     grid-column: 2/3 ;
     grid-row: 1/2;
     background-color: #F9DB6D;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(307px, 1fr)) ;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
