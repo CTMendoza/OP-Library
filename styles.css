@@ -75,7 +75,7 @@ body  {
 .sidebar {
     grid-column: 1/2;
     grid-row: 1/3;
-    background-color: #ACB0BD;;
+    background-color: #ACB0BD;
 }
 
 .nav {
@@ -86,7 +86,45 @@ body  {
 
 .content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(307px, 1fr)) ;
+    grid-template-columns: repeat(auto-fit, minmax(307px, 0.5fr)) ;
+    grid-template-rows: repeat(2, 1fr);
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    gap: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ACB0BD;
+    border-radius: 5px;
+    border: none;
+}
+
+.edit-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    gap: 10px;
+}
+
+.edit-buttons button {
+    color: black;
+    width: 162px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* .card > div {
+    
+} */
+
+.card >  :nth-child(-n+4) {
+    height: 20%;
+    font-size: 30px;
+    color: black;
 }
