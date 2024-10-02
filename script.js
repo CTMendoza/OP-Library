@@ -17,6 +17,7 @@ const pages = document.querySelector('input[name="page_total"]');
 const read = document.getElementsByName('readOrNot');
 const submit = document.querySelector('#submit-button');
 
+
 const content = document.querySelector('.content')
 
 
@@ -81,7 +82,7 @@ form.addEventListener('submit', function(e) {
         }
     }
     //store input values in new Book object
-    const newBook = new Book(author.value, title.value, pages.value, readStatus);
+    const newBook = new Book(title.value, author.value, pages.value, readStatus);
 
     //store neBook object in myLibrary array
     myLibrary.push(newBook);
