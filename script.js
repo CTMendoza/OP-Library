@@ -20,9 +20,8 @@ const submit = document.querySelector('#submit-button');
 
 const content = document.querySelector('.content')
 
-
 //a function to create a card in the DOM
-function createCard (author, title, pages, readStatus) {
+function createCard (author, title, pages, readStatus, index) {
     /*
         <div class="card">
             <div>Title:</div>
@@ -37,6 +36,7 @@ function createCard (author, title, pages, readStatus) {
     */
    const card = document.createElement('div');
    card.classList.add('card');
+   card.dataset.index = index;
 
    const titleElement = document.createElement('div');
    titleElement.textContent = `Title: ${title}`;
@@ -66,13 +66,41 @@ function createCard (author, title, pages, readStatus) {
    edit.appendChild(deleteButton);
    
    content.appendChild(card);
+
+   // Add an event listener to the deleteButton
+   deleteButton.addEventListener('click', function() {
+   console.log('DELETE!!');
+        
+   // Remove the book from myLibrary based on the index
+   myLibrary.splice(index, 1);
+        
+   // Remove the card from the DOM
+   card.remove();
+ 
+   // Log updated library to console
+   console.log(myLibrary);
+     });
+
+
+   // Add an event listener to the changeButton
+   changeButton.addEventListener('click', function() {
+    console.log('CHANGE!');
+    if(myLibrary[index].readStatus === 'read') {
+        readStatus = 'not read'
+        myLibrary[index].readStatus = 'not read'
+        readStatElement.textContent = `Read Status: ${readStatus}`;
+    } else  {
+        readStatus = 'read'
+        myLibrary[index].readStatus = 'read'
+        readStatElement.textContent = `Read Status: ${readStatus}`;
+    }
+   })
 }
 
 
 //a function that takes users input and stores them as new book objects into the myLibrary array
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-  
     // Determine the value of the selected radio button
     let readStatus;
     for (const input of read) {
@@ -82,13 +110,16 @@ form.addEventListener('submit', function(e) {
         }
     }
     //store input values in new Book object
-    const newBook = new Book(title.value, author.value, pages.value, readStatus);
+    const newBook = new Book(author.value, title.value, pages.value, readStatus);
 
     //store neBook object in myLibrary array
     myLibrary.push(newBook);
 
+    //loop through the myLibrary array using the forEach method to create the card element 
+ 
     // call createCard function to show card on web app when submit button is pressed
-    createCard(author.value, title.value, pages.value, readStatus);
+    const index = myLibrary.length - 1; // Get the index of the newly added book
+    createCard(author.value, title.value, pages.value, readStatus, index);
 
     // display myLibrary array in console
     console.log(myLibrary);
@@ -96,6 +127,8 @@ form.addEventListener('submit', function(e) {
     //clear form inputs
     form.reset(); 
 })
+
+
 
 
 
