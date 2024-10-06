@@ -93,7 +93,7 @@ label {
     grid-row: 1/2;
     background-color: #FFFFFF;
     height: 100px;
-    box-shadow: 4px 0px 4px 4px #1C2541;
+    box-shadow: 4px 1px 4px 4px #3A506B;
 }
 
 .nav-head {
@@ -107,9 +107,7 @@ label {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     gap: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .card {
