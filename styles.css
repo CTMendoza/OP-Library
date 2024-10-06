@@ -9,7 +9,6 @@ UT Orange #FF8600 (nav bar background color)
 */
 
 * {
-    color: #F1F2F6;
     font-family: "Protest Strike", sans-serif;
 }
 
@@ -86,14 +85,14 @@ label {
 
 .form-header {
  color: #6FFFE9;
-};
+}
 
 .nav {
     grid-column: 2/3 ;
     grid-row: 1/2;
-    background-color: #FFFFFF;
+    background-color: #FFFFFF ;
     height: 100px;
-    box-shadow: 4px 1px 4px 4px #3A506B;
+    box-shadow: 4px 1px 4px 4px #3A506B ;
 }
 
 .nav-head {
