@@ -10,6 +10,7 @@ UT Orange #FF8600 (nav bar background color)
 
 * {
     color: #F1F2F6;
+    font-family: "Protest Strike", sans-serif;
 }
 
 body  {
@@ -18,6 +19,11 @@ body  {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
+    background-color: #ffffff;
+}
+
+label {
+    color: #6FFFE9 ;
 }
 
 #book-form, .radio-container, .radio-container > div {
@@ -58,73 +64,89 @@ body  {
     margin-bottom: 15px;
     border-radius: 10px;
     font-size: 20px;
-    color: #AEB8FE;
+    color: #3A506B;
     border: none;
-    box-shadow: 1px 4px 3px 1px #0B3948;
+    background-color: #5BC0BE;
 }
 
 #submit-button {
-    color: #AEB8FE;
+    color: #3A506B;
+    background-color: #5BC0BE;
     width: 10rem;
     height: 3rem;
     border-radius: 10px;
     border: none;
-    box-shadow: 1px 4px 3px 1px #0B3948;
 }
 
 .sidebar {
     grid-column: 1/2;
     grid-row: 1/3;
-    background-color: #ACB0BD;
+    background-color: #1C2541;
 }
+
+.form-header {
+ color: #6FFFE9;
+};
 
 .nav {
     grid-column: 2/3 ;
     grid-row: 1/2;
-    background-color: #F9DB6D;
+    background-color: #FFFFFF;
+    height: 100px;
+    box-shadow: 4px 0px 4px 4px #1C2541;
+}
+
+.nav-head {
+    color: #1C2541;
 }
 
 .content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(307px, 0.5fr)) ;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     gap: 10px;
     margin-left: 10px;
     margin-top: 10px;
+    margin-right: 10px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    background-color: #ACB0BD;
+    background-color: #ffffff;
     border-radius: 5px;
     border: none;
+    overflow-wrap: break-word;
+    border-left: 1rem solid #5BC0BE;
+    box-shadow: 4px 4px 4px 1px #3A506B;
 }
+
 
 .edit-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20%;
     gap: 10px;
+    margin: 10px;
 }
 
 .edit-buttons button {
-    color: black;
+    color: #6FFFE9;
     width: 162px;
     height: 50px;
     border-radius: 5px;
     border: none;
+    background-color: #3A506B;
+    box-shadow: 4px 4px 4px 1px #1C2541;
 }
 
-/* .card > div {
-    
-} */
+
 
 .card >  :nth-child(-n+4) {
-    height: 20%;
-    font-size: 30px;
-    color: black;
+    margin: 10px;
+    font-size: 25px;
+    color: #1C2541;
 }
+
