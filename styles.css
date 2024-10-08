@@ -97,6 +97,7 @@ label {
 
 .nav-head {
     color: #1C2541;
+    margin-left: 50px;
 }
 
 .content {
@@ -117,7 +118,7 @@ label {
     border: none;
     overflow-wrap: break-word;
     border-left: 1rem solid #5BC0BE;
-    box-shadow: 4px 4px 4px 1px #3A506B;
+    box-shadow: 7px 0px 8px 4px #3A506B;
 }
 
 

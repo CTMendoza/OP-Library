@@ -13,16 +13,16 @@
     <div class="sidebar">
         <form action="#" method="post" id="book-form" >
             <h1 class="form-header">New Book</h1>
-            <input class="reg-input" type="text" placeholder="Title" name="title">
-            <input class="reg-input" type="text" placeholder="Author" name="author">
-            <input class="reg-input" type="number" placeholder="How many pages?" name="page_total">
+            <input class="reg-input" type="text" placeholder="Title" name="title" required>
+            <input class="reg-input" type="text" placeholder="Author" name="author" required>
+            <input class="reg-input" type="number" placeholder="How many pages?" name="page_total" required>
             <div class="radio-container">
                 <div>
-                    <input id="read" type="radio" name="readOrNot" value="read">
+                    <input id="read" type="radio" name="readOrNot" value="read" required>
                     <label for="read">Read</label>
                 </div>
                 <div>
-                    <input id="not-read" type="radio" name="readOrNot" value="not read">
+                    <input id="not-read" type="radio" name="readOrNot" value="not read" required>
                     <label for="not-read">Not Read</label> 
                 </div>
             </div>
