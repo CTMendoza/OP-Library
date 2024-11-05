@@ -2,11 +2,21 @@
 const myLibrary = [];
 
 //users book objects are created through Books constructor
-function Book (author, title, pages, readStatus) {
-    this.author = author;
-    this.title = title;
-    this.pages = pages;
-    this.readStatus = readStatus
+// function Book (author, title, pages, readStatus) {
+//     this.author = author;
+//     this.title = title;
+//     this.pages = pages;
+//     this.readStatus = readStatus
+// }
+
+// use alternative way of creating book objects by using class 
+class Book {
+    constructor (author, title, pages, readStatus) {
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.readStatus = readStatus;
+    }
 }
 
 // select the DOM inputs and submit button within the form 
